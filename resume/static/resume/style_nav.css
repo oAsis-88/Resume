@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f5f5dc;
+}
+
+header h1 {
+    background: #f5f5dc;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    height: 10%;
+}
+
+a {
+    color: #bbb;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+nav {
+    background: #49423d;
+    font-size: 1.3em;
+    width: 100%;
+    /*text-align: center;*/
+    line-height: 50pt;
+    height: 50pt;
+    /*margin-bottom: 10px;*/
+}
+
+nav #navbar {
+    text-align: right;
+}
+
+/* Все ссылки в about */
+nav a {
+    padding: 100% 0.2em;
+    position: relative;
+    text-decoration: none;
+    /*text-transform: uppercase;*/
+    /*margin: 10px 0;*/
+}
+
+/* Все ссылки в about при наведении */
+nav a:hover {
+    color: #000;
+    background-color: #ce0606;
+}
+
+/* отступ между ссылками */
+nav a:not(:last-child) {
+    margin-right: 7%;
+}
+
+footer {
+    width: 100%;
+    /*margin-left: 170px;*/
+    background-color: #bbb;
+    padding: 10px 0.5% 10px 0.5%;
+    /*background: ; !* Задний фон *!*/
+    float: left;
+    /*position: ;*/
+
+}
+
+section {
+    width: 100%;
+    background-color: #f5deb3;
+    padding: 10px 0.5% 10px 0.5%;
+}
+
+#logo {
+    float: left;
+    width: 5%;
+    font-size: 1.1em;
+}
+#about {
+        float: right;
+        width: 67%;
+    }
+
+@media (max-width: 700px) {
+    nav {
+        width: 100%;
+        text-align: center;
+        line-height: 45px;
+        height: 45px;
+        font-size: 15px;
+    }
+    #logo {
+        font-size: 15px;
+    }
+
+    #about {
+        font-size: 15px;
+    }
+}
+@media (max-width: 500px) {
+    nav {
+        width: 100%;
+        text-align: center;
+        line-height: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+    #logo {
+        font-size: 10px;
+    }
+
+    #about {
+        font-size: 10px;
+    }
+}

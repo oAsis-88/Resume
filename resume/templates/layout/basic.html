@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Главная{% endblock %} :: Резюме</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'resume/style.css' %}">
+</head>
+<body>
+
+<header>
+    <div>Резюме</div>
+</header>
+{#<nav>#}
+{#    <div id="logo" onclick="slowScroll('#top')">#}
+{#        <a href="{% url 'index' %}">Resume</a>#}
+{#    </div>#}
+{#    <div id="navbar">#}
+{#        <a href="#" title="Home">Home</a>#}
+{#        <a href="#" title="Skill">Skill</a>#}
+{#        <a href="#" title="Contacts">Contacts</a>#}
+{#        <a href="#" title="">Что-то еще</a>#}
+{#    </div>#}
+{#        {% for kn in knowledge %}#}
+{#            <a href="{% url 'index' %}" title="{{ kn.title }}" onclick="">{{ kn.title }}</a>#}
+{#        {% endfor %}#}
+{#</nav>#}
+<div class="about">
+    <p>About</p>
+    {% block div_about %}
+        <h2 id="Name">Ryabikov Ilya</h2>
+        <span> Beginner IT specialist </span>
+    {% endblock %}
+</div>
+<div class="InfoAbout">
+    <div id="Address">
+        <h3>Address</h3>
+        <span>Moskovsky ave.<br>Voronezh city<br> </span>
+    </div>
+    <div id="Contact">
+        <h3>Contact</h3>
+        <span>
+            <a href="tel: +79102822568">+7 (910) 282-25-68</a>
+        </span>
+        <br>
+        <span>
+            <a href="mailto:ya.ir9@htmlbook.ru">ya.ir9@ya.ru</a>
+        </span>
+    </div>
+    <div id="DataOfBirth">
+        <h3>Data of birth</h3>
+        <span>11.03.2002</span>
+    </div>
+</div>
+
+<section>
+    {#    {% block section_content_1 %}#}
+    {#    Section#}
+    <div class="content_1">
+        <div>
+            <h3>Education</h3>
+            <span>Студент (2020-2024)<br>- ВГУ, ФКН, ИБ</span>
+        </div>
+
+        <div>
+            <h3>Experience</h3>
+            <span>Опыта коммерческой разработки не имею.</span>
+        </div>
+
+        <div>
+            <h3>Skills</h3>
+            {#        <span>#}
+            {% for kn in knowledge %}
+                <span id="Languages">{{ kn.title }}</span><br>
+                {{ kn.content }}<br>
+            {% endfor %}
+            {#        </span>#}
+        </div>
+
+        <div>
+            <h3>Hobbies</h3>
+            <span>Занимался 8 лет плаванием.</span><br>
+            <span>Увлекаюсь искусством</span><br>
+            <span>Интересуюсь IT-технологиями во многих сферах</span>
+        </div>
+    </div>
+    {#    {% endblock %}#}
+    {#    {% block section_content_2 %}#}
+    <div class="content_2">
+        <div>
+            <h3>Personality</h3>
+            <span>Responsible.</span>
+            <span>Purposeful.</span>
+            <span>Easy to teach.</span>
+            <span>Punctual.</span>
+            <span>Conscientiousness.</span>
+            <span>Optimistic.</span>
+            <span>Communicative.</span>
+            <span>Creative.</span>
+        </div>
+        <div>
+            <h3>Software skills</h3>
+            <span>Microsoft Word</span><br>
+            <span>Microsoft Excel</span>
+            <span></span>
+        </div>
+        <div>
+            <h3>Languages</h3>
+            <span>English - Elementary.</span>
+        </div>
+        <div class="links">
+            <h3>Links</h3>
+            <ul>
+                <li>github - <a href="https://github.com/oAsis-88">github.com/oAsis-88</a></li>
+                <li>VK - <a href="https://vk.com/oasis_88">vk.com/oasis_88</a></li>
+            </ul>
+        </div>
+    </div>
+    {#    {% endblock %}#}
+</section>
+
+<footer>
+    {#    {% block footer %}#}
+    {#    {% endblock %}#}
+    <div>
+        Footer<br>
+        Link
+    </div>
+</footer>
+
+</body>
+</html>

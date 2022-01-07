@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+
+.parent1 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color: brown;
+    background-size: cover;
+    height: 500px;
+}
+
+.block_left1, .block_right1 {
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+/*.block_left:hover {*/
+
+/*}*/
+l_, r_ {
+    text-align: center;
+    font-size: 30px;
+}
+
+l_ {
+    color: black;
+}
+
+r_ {
+    color: wheat;
+}
+
+.left1 {
+    width: 50%;
+    background-color: wheat;
+    left: -50%;
+}
+
+.center1 {
+    /*display: flex;*/
+    width: 50%;
+}
+
+.right1 {
+    width: 50%;
+    background-color: black;
+    right: 100px;
+}
+
+.left1:hover ~ c_ {
+    background-color: white;
+    transform-origin: right top;
+    transform: scaleX(2);
+    transition: .3s;
+}
+.center1:hover ~ r_ {
+    transform: scaleX(1.5);
+}
+
+.bg1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+/*.block_right:hover {*/
+/*    background-color: black;*/
+/*    transition: .3s;*/
+/*}*/
+.block_right:hover ~ .right {
+    background-color: black;
+    transition: .3s;
+}
+
+.block_left:hover ~ .bg, .block_left:hover ~ p {
+    background-color: black;
+    /*transition: .3s;*/
+}
+
+.block_left:hover + .left {
+    left: 0;
+}
+
+.parent {
+    display: flex;
+    width: 100%;
+    background-color: brown;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.child-left, .child-right {
+    display: flex;
+    width: 50%;
+    position: relative;
+    z-index: 1
+}
+
+.block_left {
+    background-color: wheat;
+    left: -100%;
+}
+
+.block_right {
+    background-color: darkgrey;
+    right: -100%;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.child-left:hover ~ .bg {
+    /*background-color: burlywood;*/
+    transition: .3s;
+}
+
+.child-left:hover + .block_left {
+    left: 0;
+}
+
+.child-right:hover ~ .bg {
+    /*background-color: green;*/
+    transition: .3s;
+}
+
+.child-right:hover + .block_right {
+    right: 0;
+}
+
+#blok1 {
+    position: relative;
+    margin: 100px 100px;
+    width: 200px;
+    height: 200px;
+    background: green;
+}
+
+#blok2 {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 100px;
+    height: 100px;
+    background: #bbb;
+}
+
+#blok4 {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+}
+
+#blok4:hover{
+    width: 300px;
+    left: 200px;
+    transform-origin: right top;
+    /*-webkit-transform: scaleX(1);*/
+    /*-ms-transform: scaleX(1);*/
+    /*transform: scaleX(1);*/
+    transition: .3s;
+}
+#blok2:hover{
+    width: 300px;
+    /*left: 300px;*/
+    transform-origin: left bottom;
+    /*-webkit-transform: scaleX(1.5);*/
+    /*-ms-transform: scaleX(1.5);*/
+    /*transform: scaleX(1.5);*/
+    transition: .3s;
+}
+#blok2:hover ~ #blok4{
+    display: none;
+}
+
+
+s, b {
+    width: 100vw;
+    height: 100px;
+}
+
+s {
+    background-color: wheat;
+    color: darkgrey;
+}
+
+b {
+    background-color: darkgrey;
+    color: wheat;
+}
+
+
+/*span {*/
+/*    text-align: center;*/
+/*}*/
+
+.box_left, .box_right {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    min-height: 100vh;
+}
+
+.box_left {
+    float: left;
+    /*transition: .3s;*/
+
+}
+
+.box_right {
+    /*float: right;*/
+}
+
+.left, .right {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 200px;
+    text-align: center;
+    transition: .3s;
+
+
+}
+
+.left {
+    /*float: left;*/
+    /*background-color: wheat;*/
+    /*color: darkgrey;*/
+    left: -100vw;
+}
+
+.right {
+    /*float: right;*/
+    /*background-color: darkgrey;*/
+    /*color: wheat;*/
+    right: -100vw;
+
+    /*/*text-align: center;*/
+    /*margin: 0 auto;*/
+}
+
+/*.box_left:hover ~ .box_right {*/
+/*    position: relative;*/
+/*    background-color: wheat;*/
+/*    color: darkgrey;*/
+/*    transition: .3s;*/
+/*}*/
+
+/*.box_right:hover ~ .box_left {*/
+/*    position: relative;*/
+/*    background-color: darkgrey;*/
+/*    color: wheat;*/
+/*    transition: .3s;*/
+/*}*/
+
+.box_left:hover ~ span, .box_left:hover .left, .box_right:hover ~ span, .box_right:hover .right {
+    /*width: 50vw;*/
+}
+
+.box_left:hover ~ div, .box_left:hover ~ div {
+    position: relative;
+    /*background-color: wheat;*/
+}
+
+.box_left:hover ~ span, .box_left:hover .left {
+    left: 0;
+    background-color: white;
+    color: black;
+    transform: translateX(100px);
+}
+
+.box_right:hover ~ span, .box_right:hover .right {
+    right: 0;
+    background-color: black;
+    color: white;
+    transform: translateX(-100px);
+}
+
+
+/*.right:hover {*/
+/*width: 100%;*/
+/*top: 100%;*/
+/*left: 100%;*/
+/*transform: translateX(100%);*/
+/*background: wheat;*/
+/*color: darkgrey;*/
+/*}*/

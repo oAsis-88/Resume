@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    background: #332F2C;
+    color: #D7D7D7;
+}
+
+.about {
+    padding: 1.1em 1.1em 1.1em 1.1em;
+    background: #F5F5F5;;
+    /*padding: 10px*/
+}
+
+.about h2 {
+    margin-bottom: 0.3em;
+    /*padding: 10px*/
+}
+
+.InfoAbout {
+    display: flex;
+    flex-direction: row;
+    padding: 1.1em 1.1em 1.1em 1.1em;
+    background: #DCDCDC;
+}
+
+.InfoAbout #Address {
+    flex: auto;
+}
+
+.InfoAbout #Contact {
+    flex: auto;
+}
+
+.InfoAbout #DataOfBirth {
+    flex: auto;
+}
+
+section #Languages {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.InfoAbout #Contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.InfoAbout #Contact a:hover {
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+}
+
+section {
+    flex-direction: row;
+    flex: 1 0 auto;
+    width: 100%;
+    background-color: #F5F5F5;
+    /*padding: 1.1em 0 1.1em 1.1em;*/
+}
+
+section div {
+    /*display: inline-block;*/
+
+}
+
+/*section .content {*/
+/*    display: inline-block;*/
+/*    padding: 1.1em 1.1em 1.1em 1.1em;*/
+/*    width: 40%;*/
+/*    vertical-align: top;*/
+/*    background: dodgerblue;*/
+/*}*/
+section .content_1 {
+    float: left;
+    width: 60%;
+    border: 1.1em;
+}
+
+section .content_2 {
+    float: right;
+    width: 40%;
+}
+
+section .content_1 div, .content_2 div {
+    padding: 1.1em 1.1em 1.1em 1.1em;
+    margin: 1.1em 1.1em 1.1em 1.1em;
+}
+
+section .content_1 div h3, .content_2 div h3 {
+    /*width: 100%;*/
+    /*text-decoration: underline;*/
+
+    background-image: -webkit-repeating-linear-gradient(top, transparent 0px, transparent 19px, #000 19px, transparent 20px);
+}
+
+.links ul {
+    padding: 10px 10px 10px 20px;
+    type: circle;
+    /*padding: 1% 0 0 4%;*/
+}
+
+.links a:visited {
+    color: dodgerblue;
+}
+
+footer {
+    flex: 0 0 auto;
+    width: 100%;
+    background-color: #332F2C;
+    color: #D7D7D7;
+}
+
+footer div {
+    margin: 1.1em 1.1em 1.1em 1.1em;
+}
